@@ -43,8 +43,7 @@ function calculateMonthlyPayment(values) {
   let P = values.amount;
   let i = (values.rate / 100) / 12;
   let n = values.years * 12;
-  let monthlyPayment = ((P * i) / 
-  (1 - Math.pow((1 + i), -n))).toFixed(2);
+  let monthlyPayment = ((P * i) / (1 - Math.pow((1 + i), -n))).toFixed(2);
   JSON.stringify(monthlyPayment);
   return monthlyPayment;
 }
